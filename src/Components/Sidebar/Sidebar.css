@@ -1,0 +1,61 @@
+.sider-body{
+    padding-top: 70px;
+    height: 100vh;
+}
+
+.sider-body .list-menu{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sider-body .name-menu{
+    margin-left: 10px;
+}
+
+/* SIDE */
+.sider-body .ui.thin.left.sidebar, .ui.thin.right.sidebar{
+    width: 275px;
+    background-color: #f0f2f5;
+}
+
+.sider-body .ui.labeled.icon.menu .item{
+    color: #111;
+    padding: 1.5em; 
+    transition: all 0.3s ease;
+}
+
+.sider-body .ui.labeled.icon.menu .item:hover{
+    background-color: #b5e2f7;
+}
+
+.sider-body .ui.left.visible.sidebar, .ui.right.visible.sidebar{
+    box-shadow: none;
+}
+
+/* CONTENT */
+.sider-body .ui.visible.thin.left.sidebar~.fixed, .ui.visible.thin.left.sidebar~.pusher{
+    transform: translate3d(275px,0,0) !important;
+    background-color: #f0f2f5;
+}
+
+
+.sider-body .profile{
+    padding: 2em 1em;
+}
+
+.sider-body .profile img{
+    width: 60px;
+}
+
+.sider-body .name-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    margin-left: 10px;
+}
+
+.sider-body .name-profile div:nth-child(1){
+    font-size: 18px;
+    font-weight: bold;
+}
