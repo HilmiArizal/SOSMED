@@ -8,13 +8,13 @@ import 'semantic-ui-css/semantic.min.css';
 import { AuthContextProvider } from './Contexts/Auth/AuthContext';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <AuthContextProvider>
-      <BrowserRouter>
+  // <React.StrictMode>
+    <BrowserRouter>
+      <AuthContextProvider>
         <App />
-      </BrowserRouter>
-    </AuthContextProvider>
-  </React.StrictMode>,
+      </AuthContextProvider>
+    </BrowserRouter>,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 

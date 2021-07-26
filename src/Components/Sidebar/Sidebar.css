@@ -1,6 +1,6 @@
 .sider-body{
     padding-top: 70px;
-    height: 100vh;
+    min-height: 91vh;
 }
 
 .sider-body .list-menu{
@@ -36,8 +36,9 @@
 .sider-body .ui.visible.thin.left.sidebar~.fixed, .ui.visible.thin.left.sidebar~.pusher{
     transform: translate3d(275px,0,0) !important;
     background-color: #f0f2f5;
+    max-width: 1165px;
+    min-height: 91vh;
 }
-
 
 .sider-body .profile{
     padding: 2em 1em;

@@ -31,29 +31,29 @@ export const Sider = () => {
                             <div>Front End Developer</div>
                         </div>
                     </div>
-                    <Link to="/">
-                        <Menu.Item as='a'>
+                    <Link to="/" >
+                        <Menu.Item>
                             <div className="d-flex list-menu">
                                 <div><Icon name='home' /></div>
                                 <div className="name-menu">Beranda</div>
                             </div>
                         </Menu.Item>
                     </Link>
-                    <Menu.Item as='a'>
+                    <Menu.Item>
                         <div className="d-flex list-menu">
                             <div><Icon name='group' /></div>
                             <div className="name-menu">Teman</div>
                         </div>
                     </Menu.Item>
                     <Link to="/messanger">
-                        <Menu.Item as='a'>
+                        <Menu.Item>
                             <div className="d-flex list-menu">
                                 <div><Icon name='chat' /></div>
                                 <div className="name-menu">Pesan</div>
                             </div>
                         </Menu.Item>
                     </Link>
-                    <Menu.Item as='a'>
+                    <Menu.Item>
                         <div className="d-flex list-menu">
                             <div><Icon name='alarm' /></div>
                             <div className="name-menu">Notifikasi</div>

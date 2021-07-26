@@ -1,0 +1,123 @@
+.messanger-body{
+    display: flex;
+}
+
+/* MESSANGER */
+.messanger-body .messanger-section{
+    flex: 8.5;
+}
+
+.messanger-body .messanger-top{
+    height: 70vh;
+    overflow-y: scroll;
+    padding-right: 10px;
+}
+
+.messanger-body .messanger-bottom{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.messanger-body .messanger-input{
+    width: 90%;
+    height: 90px;
+    padding: 10px;
+}
+
+.messanger-body .messanger-send{
+    width: 70px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/*  */
+.messanger-body .message-body{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.messanger-body .message-body .message-top{
+    display: flex;
+}
+
+.messanger-body .message-body .message-top img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.messanger-body .message-body .message-top p{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #00B0FF;
+    color: #fff;
+    max-width: 500px;
+}
+
+.messanger-body .message-body .message-bottom{
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.message-body.own{
+    align-items: flex-end;
+}
+
+
+/* FRIEND */
+.messanger-body .friend-section{
+    margin-left: 10px;
+    flex: 3.5;
+}
+
+.messanger-body .friend-container{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.messanger-body .friend-container:hover{
+    background-color: #b5e2f7;
+}
+
+.messanger-body .friend-img-container{
+    position: relative;
+}
+
+.messanger-body .friend-title{
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.messanger-body .friend-section img{
+    width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid white;
+}
+
+.messanger-body .friend-section span{
+    margin-left: 10px;
+}
+
+.messanger-body .friend-online{
+    width: 10px;
+    height: 10px;
+    background-color: limegreen;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    right: 2px;
+}
