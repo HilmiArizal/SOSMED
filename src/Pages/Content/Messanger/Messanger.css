@@ -71,6 +71,16 @@
     align-items: flex-end;
 }
 
+.messanger-body .messanger-start{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    color: #b5e2f7;
+    cursor: default;
+
+}
+
 
 /* FRIEND */
 .messanger-body .friend-section{

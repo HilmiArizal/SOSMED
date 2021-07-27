@@ -69,4 +69,10 @@
     width: 100%;
 }
 
+.login-body .ui.icon.input>i.icon{
+    cursor: pointer !important;
+}
 
+.login-body .ui.icon.input>i.icon:not(.link){
+    pointer-events: unset;
+}

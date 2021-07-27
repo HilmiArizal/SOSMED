@@ -13,8 +13,10 @@ export const Header = () => {
 
     const onBtnLogout = () => {
         localStorage.removeItem('user');
-        window.location.reload();
-        console.log(user);
+        setTimeout(() => {
+            console.log(user);
+            window.location.reload();
+        }, 500);
     }
 
     return (

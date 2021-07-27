@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon, Input } from 'semantic-ui-react';
 import SocialNetworking from '../../../Assets/svg/social-networking.svg';
@@ -9,9 +9,16 @@ import { AuthContext } from '../../../Contexts/Auth/AuthContext';
 
 export default function Login() {
 
+    const [hidePass, setHidePass] = useState(false);
+
+
     const { dispatch } = useContext(AuthContext);
     const usernameValue = useRef();
     const passwordValue = useRef();
+
+    const onChangePass = () => {
+        setHidePass(!hidePass);
+    }
 
     const onBtnLogin = (e) => {
         e.preventDefault();
@@ -34,7 +41,7 @@ export default function Login() {
                         </div>
                         <div className="text">
                             <p> Hallo bro, bergabung dengan kami sekarang! <br />
-                            <span style={{color:'grey', fontSize:'12px'}}>Nikmati berbagai macam fitur yang menarik untuk menemani waktu luang kamu.</span>
+                                <span style={{ color: 'grey', fontSize: '12px' }}>Nikmati berbagai macam fitur yang menarik untuk menemani waktu luang kamu.</span>
                             </p>
                         </div>
                         <div className="button">
@@ -56,8 +63,12 @@ export default function Login() {
                             <br />
                             <br />
                             <Input icon placeholder='Password' size="small" className="input">
-                                <input ref={passwordValue} />
-                                <Icon name='eye' />
+                                <input ref={passwordValue} type={hidePass ? "text" : "password"} />
+                                {
+                                    hidePass ?
+                                        <Icon name='eye slash' onClick={onChangePass} /> :
+                                        <Icon name='eye' onClick={onChangePass} />
+                                }
                                 {/* <Icon name='eye slash' /> */}
                             </Input>
                             <br />
