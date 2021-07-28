@@ -25,7 +25,7 @@ const App = () => {
         <Switch>
           <Route path="/" exact ><Login /></Route>
           <Route path="/register" ><Register /></Route>
-          <Route path="*" ><NotFound /></Route>
+          {/* <Route path="*" ><NotFound /></Route> */}
         </Switch>
       </div>
     );
