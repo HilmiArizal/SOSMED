@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SOSMED/static/css/main.6da92e96.chunk.css",
-    "main.js": "/SOSMED/static/js/main.fe5dbe6d.chunk.js",
-    "main.js.map": "/SOSMED/static/js/main.fe5dbe6d.chunk.js.map",
+    "main.js": "/SOSMED/static/js/main.556e9c81.chunk.js",
+    "main.js.map": "/SOSMED/static/js/main.556e9c81.chunk.js.map",
     "runtime-main.js": "/SOSMED/static/js/runtime-main.5cd78373.js",
     "runtime-main.js.map": "/SOSMED/static/js/runtime-main.5cd78373.js.map",
     "static/css/2.a68748e3.chunk.css": "/SOSMED/static/css/2.a68748e3.chunk.css",
@@ -24,6 +24,6 @@
     "static/css/2.a68748e3.chunk.css",
     "static/js/2.2c10052f.chunk.js",
     "static/css/main.6da92e96.chunk.css",
-    "static/js/main.fe5dbe6d.chunk.js"
+    "static/js/main.556e9c81.chunk.js"
   ]
 }
