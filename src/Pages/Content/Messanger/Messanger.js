@@ -24,7 +24,7 @@ export default function Messanger() {
 
 
     useEffect(() => {
-        socket.current = io("https://enigmatic-meadow-85268.herokuapp.com/");
+        socket.current = io("https://pacific-island-17875.herokuapp.com");
         socket.current.on("getMessage", (data) => {
             setArrivalMessage({
                 sender: data.senderId,
@@ -88,6 +88,8 @@ export default function Messanger() {
             receiverId,
             text: newMessage
         })
+
+        console.log(receiverId);
 
         try {
             const res = await Axios.post(config.API_URL + `message`, dataMessage);

@@ -23,7 +23,7 @@ const App = () => {
     return (
       <div>
         <Switch>
-          <Route path="/SOSMED" exact ><Login /></Route>
+          <Route path="/" exact ><Login /></Route>
           <Route path="/register" ><Register /></Route>
           {/* <Route path="*" ><NotFound /></Route> */}
         </Switch>
