@@ -24,7 +24,7 @@ export default function Messanger() {
 
 
     useEffect(() => {
-        socket.current = io("ws://localhost:8900");
+        socket.current = io("https://enigmatic-meadow-85268.herokuapp.com/");
         socket.current.on("getMessage", (data) => {
             setArrivalMessage({
                 sender: data.senderId,

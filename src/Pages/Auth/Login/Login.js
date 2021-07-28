@@ -31,7 +31,7 @@ export default function Login() {
     return (
         <div className="login-body">
             <div className="row">
-                <div className="col-md-4 left">
+                <div className="col-md-6 left">
                     <div className="title">
                         <div className="text">
                             <div>Hilmi SosMed, Bro!</div>
@@ -51,7 +51,7 @@ export default function Login() {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-8 right">
+                <div className="col-md-6 right">
                     <div className="card">
                         <div className="title">
                             <img src={LogoHS} alt="img-hs" />
