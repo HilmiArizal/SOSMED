@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { Header } from './Components/Header/Header';
 import { Sider } from './Components/Sidebar/Sidebar';
 import { AuthContext } from './Contexts/Auth/AuthContext';
@@ -14,20 +14,20 @@ const App = () => {
 
   if (user) {
     return (
-      <div>
+      <HashRouter basename="/">
         <Header />
         <Sider />
-      </div>
-    );
+      </HashRouter>
+    )
   } else {
     return (
-      <div>
+      <HashRouter basename="/">
         <Switch>
-          <Route path="/" exact ><Login /></Route>
-          <Route path="/register" ><Register /></Route>
-          {/* <Route path="*" ><NotFound /></Route> */}
+          <Route path="/" exact><Login /></Route>
+          <Route path="/register"><Register /></Route>
+          <Route path="*"><NotFound /></Route>
         </Switch>
-      </div>
+      </HashRouter>
     );
   }
 

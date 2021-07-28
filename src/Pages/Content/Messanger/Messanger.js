@@ -24,7 +24,7 @@ export default function Messanger() {
 
 
     useEffect(() => {
-        socket.current = io("https://pacific-island-17875.herokuapp.com");
+        socket.current = io("http://localhost:8900");
         socket.current.on("getMessage", (data) => {
             setArrivalMessage({
                 sender: data.senderId,
@@ -138,7 +138,6 @@ export default function Messanger() {
                         <Friend conversation={item} currentUser={user} key={index} />
                     </div>
                 ))}
-
             </div>
         </div>
     );
