@@ -24,8 +24,8 @@ export default function Messanger() {
 
 
     useEffect(() => {
-        // socket.current = io("https://pacific-island-17875.herokuapp.com");
-        socket.current = io("http://192.168.1.5:8900");
+        socket.current = io("https://pacific-island-17875.herokuapp.com");
+        // socket.current = io("http://192.168.1.5:8900");
         socket.current.on("getMessage", (data) => {
             setArrivalMessage({
                 sender: data.senderId,
