@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
 import { Icon, Menu, Segment, Sidebar } from 'semantic-ui-react';
 import Home from '../../Pages/Content/Home/Home';
@@ -6,9 +6,13 @@ import AvatarMale from '../../Assets/svg/male-avatar.svg';
 import './Sidebar.css';
 import Messanger from '../../Pages/Content/Messanger/Messanger';
 import NotFound from '../../Pages/Content/NotFound/NotFound';
+import { AuthContext } from '../../Contexts/Auth/AuthContext';
 
 
 export const Sider = () => {
+
+    const { user } = useContext(AuthContext);
+
     return (
         <div className="sider-body">
             <Sidebar.Pushable as={Segment}>
@@ -27,7 +31,7 @@ export const Sider = () => {
                             <img src={AvatarMale} alt="img-am" />
                         </div>
                         <div className="name-profile">
-                            <div>Hilmi Arizal</div>
+                            <div>{user.username}</div>
                             <div>Front End Developer</div>
                         </div>
                     </div>

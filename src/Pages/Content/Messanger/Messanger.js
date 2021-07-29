@@ -24,7 +24,8 @@ export default function Messanger() {
 
 
     useEffect(() => {
-        socket.current = io("https://pacific-island-17875.herokuapp.com");
+        // socket.current = io("https://pacific-island-17875.herokuapp.com");
+        socket.current = io("http://192.168.1.5:8900");
         socket.current.on("getMessage", (data) => {
             setArrivalMessage({
                 sender: data.senderId,
@@ -40,7 +41,7 @@ export default function Messanger() {
 
     useEffect(() => {
         socket.current.emit("addUser", user._id);
-        socket.current.on("getUsers", (item, index) => {
+        socket.current.on("getUser", (users) => {
             // console.log(users);
         })
     }, [user]);
@@ -125,7 +126,7 @@ export default function Messanger() {
                         </div>
                     ) : (
                             <div className="messanger-start">
-                                Ayo kita mulai chat dengan teman anda.
+                                Ayo mulai chat dengan teman anda.
                             </div>
                         )
                 }
