@@ -57,6 +57,14 @@
 .messanger-body .message-body .message-top p{
     padding: 10px;
     border-radius: 20px;
+    background-color: #686868;
+    color: #fff;
+    max-width: 500px;
+}
+
+.messanger-body .message-body.own .message-top p{
+    padding: 10px;
+    border-radius: 20px;
     background-color: #00B0FF;
     color: #fff;
     max-width: 500px;
