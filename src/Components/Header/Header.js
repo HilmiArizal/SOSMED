@@ -63,12 +63,14 @@ export const Header = () => {
                                         <Divider />
                                         <div className="menu">
                                             <ul>
-                                                <li>
-                                                    <Icon circular name='setting' inverted />
-                                                    <span>
-                                                        Pengaturan &amp; Privasi
+                                                <Link to="/setting">
+                                                    <li>
+                                                        <Icon circular name='setting' inverted />
+                                                        <span>
+                                                            Pengaturan &amp; Privasi
                                                     </span>
-                                                </li>
+                                                    </li>
+                                                </Link>
                                                 <li>
                                                     <Icon circular name='question' inverted />
                                                     <span>

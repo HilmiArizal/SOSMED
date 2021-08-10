@@ -1,0 +1,69 @@
+.setting-body{
+    padding: 1em;
+}
+
+.setting-body .setting-title{
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.setting-body .image label{
+    cursor: pointer;
+}
+
+.setting-body img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.setting-body .img-edit{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.setting-body .image i.icon, i.icons{
+    position: absolute;
+    left: 165px;
+    top: 250px;
+    font-size: 50px;
+}
+
+.setting-body .image-edit i.icon, i.icons{
+    position: absolute;
+    left: 110px;
+    top: 140px;
+    font-size: 30px;
+}
+
+.setting-body .image-preview img,svg{
+    vertical-align: top;
+}
+
+.setting-body form .ui.input>input{
+    border: none;
+    background-color: #f0f2f5;
+    border-radius: 0;
+    border-bottom: 1px solid black;
+}
+
+.setting-body form .input{
+    width: 100% !important;
+}
+
+.setting-body form .input-text div{
+    font-weight: 500;
+}
+
+.setting-body .get-profile .list-profile div:nth-child(1){
+    font-weight: 600;
+}
+
+.modal-backdrop {
+    z-index: -1;
+}

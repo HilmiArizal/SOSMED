@@ -28,6 +28,10 @@
     background-color: #b5e2f7;
 }
 
+.sider-body .active-page{
+    background-color: #b5e2f7 !important;
+}
+
 .sider-body .ui.left.visible.sidebar, .ui.right.visible.sidebar{
     box-shadow: none;
 }

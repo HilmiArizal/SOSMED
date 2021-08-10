@@ -96,16 +96,27 @@
     flex: 3.5;
 }
 
-.messanger-body .friend-container{
-    display: flex;
+.messanger-body .friend-list{
     cursor: pointer;
-    align-items: center;
     font-weight: 500;
-    margin-top: 10px;
 }
 
-.messanger-body .friend-container:hover{
+.messanger-body .friend-list:hover{
     background-color: #b5e2f7;
+}
+
+.messanger-body .friend-list ul{
+    padding: 0;
+    list-style: none;
+}
+
+.messanger-body .friend-list ul li{
+    padding: 2px;
+}
+
+.messanger-body .friend-container{
+    display: flex;
+    align-items: center;
 }
 
 .messanger-body .friend-img-container{

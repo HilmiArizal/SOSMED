@@ -1,0 +1,90 @@
+.home-body {
+    display: flex;
+}
+
+.home-body .home-post{
+    flex: 7;
+}
+
+.home-body .add-post, .get-post{
+    padding: 1em;
+}
+
+.home-body .card{
+    padding: 2em;
+}
+
+.home-body .card .img-avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.home-body .card .img-file{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.home-body .post-input{
+    border: none;
+    width: 80%;
+}
+
+.home-body .post-input:focus{
+    outline: none;
+}
+
+.home-body .post-item > div{
+    border-radius: 3px;
+    padding: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.home-body .post-item > div:hover{
+    background-color: rgb(158, 158, 158);
+}
+
+.home-body .feed-post{
+    flex: 3;
+}
+
+.home-body .card .img-post{
+    width: 100%;
+    height: 400px;
+}
+
+.home-body .card .top-post div{
+    font-weight: bold;
+}
+
+.home-body .card .top-post span{
+    font-size: 12px;
+}
+
+.home-body .get-post-body .card .like-post{
+    padding: 5px;
+    background-color: #00B0FF;
+    color: #fff;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.home-body .get-post-body .card .icon{
+    margin: auto;
+}
+
+.home-body .get-post-body .card .love-post{
+    padding: 5px;
+    background-color: #ff433c;
+    color: #fff;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.home-body .get-post-body .ui.dropdown .menu{
+    left: -130px;
+}

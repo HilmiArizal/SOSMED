@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch, useLocation } from 'react-router-dom';
 import { Icon, Menu, Segment, Sidebar } from 'semantic-ui-react';
 import Home from '../../Pages/Content/Home/Home';
 import AvatarMale from '../../Assets/svg/male-avatar.svg';
@@ -7,11 +7,16 @@ import './Sidebar.css';
 import Messanger from '../../Pages/Content/Messanger/Messanger';
 import NotFound from '../../Pages/Content/NotFound/NotFound';
 import { AuthContext } from '../../Contexts/Auth/AuthContext';
+import Setting from '../../Pages/Content/Setting/Setting';
 
 
 export const Sider = () => {
 
     const { user } = useContext(AuthContext);
+
+    const location = useLocation();
+    const { pathname } = location;
+    const splitLocation = pathname.split("/SOSMED");
 
     return (
         <div className="sider-body">
@@ -36,21 +41,21 @@ export const Sider = () => {
                         </div>
                     </div>
                     <Link to="/" >
-                        <Menu.Item>
+                        <Menu.Item className={splitLocation[0] === "/" ? "active-page" : ""}>
                             <div className="d-flex list-menu">
                                 <div><Icon name='home' /></div>
                                 <div className="name-menu">Beranda</div>
                             </div>
                         </Menu.Item>
                     </Link>
-                    <Menu.Item>
+                    <Menu.Item >
                         <div className="d-flex list-menu">
                             <div><Icon name='group' /></div>
                             <div className="name-menu">Teman</div>
                         </div>
                     </Menu.Item>
                     <Link to="/messanger">
-                        <Menu.Item>
+                        <Menu.Item className={splitLocation[0] === "/messanger" ? "active-page" : ""}>
                             <div className="d-flex list-menu">
                                 <div><Icon name='chat' /></div>
                                 <div className="name-menu">Pesan</div>
@@ -70,6 +75,7 @@ export const Sider = () => {
                         <Switch>
                             <Route path="/" exact><Home /></Route>
                             <Route path="/messanger" exact><Messanger /></Route>
+                            <Route path="/setting"><Setting /></Route>
                             <Route path="*" exact><NotFound /></Route>
                         </Switch>
                     </Segment>

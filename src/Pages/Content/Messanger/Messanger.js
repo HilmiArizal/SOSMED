@@ -22,7 +22,6 @@ export default function Messanger() {
 
     const socket = useRef();
 
-
     useEffect(() => {
         // socket.current = io("https://pacific-island-17875.herokuapp.com/");
         socket.current = io("http://192.168.1.5:8900");
@@ -32,7 +31,7 @@ export default function Messanger() {
                 text: data.text,
                 createdAt: Date.now()
             });
-        })
+        });
     }, []);
 
     useEffect(() => {
@@ -74,6 +73,10 @@ export default function Messanger() {
         getMessages();
     }, [currentChat?._id]);
 
+    const onChangeCurrent = async (data) => {
+        setCurrentChat(data);
+    }
+
     const onSendMessage = async (e) => {
         e.preventDefault();
         const dataMessage = {
@@ -103,6 +106,7 @@ export default function Messanger() {
 
     return (
         <div className="messanger-body">
+            <div className="messanger-name">{currentChat?.username}</div>
             <div className="messanger-section">
                 {
                     currentChat ? (
@@ -135,7 +139,7 @@ export default function Messanger() {
                 <div className="friend-title">Teman anda</div>
                 <Divider />
                 {conversations.map((item, index) => (
-                    <div onClick={() => setCurrentChat(item)} key={index}>
+                    <div onClick={() => onChangeCurrent(item)} key={index} className="friend-list">
                         <Friend conversation={item} currentUser={user} key={index} />
                     </div>
                 ))}
